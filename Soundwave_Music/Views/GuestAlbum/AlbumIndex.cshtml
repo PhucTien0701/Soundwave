@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Album Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    // ** NEW RELEASE ALBUMS
+    var albumnewrelease = (List<Soundwave_Music.Models.Album>)ViewBag.AlbumNewRelease;
+    // ** TOP LOVED ALBUMS
+    var toplovedalbum = (List<Soundwave_Music.Models.Album>)ViewBag.TopLovedAlbum;
+    // ** HOT ALBUMS
+    var hotalbum = (List<Soundwave_Music.Models.Album>)ViewBag.HotAlbum;
+    // ** TOP VIEWS ALBUMS
+    var topalbumofmoth = (List<Soundwave_Music.Models.Album>)ViewBag.TopAlbumOfMoth;
+    // ** ALBUM GENRE
+    var albumgenre = (List<Soundwave_Music.Models.Genre>)ViewBag.AlbumGenre;
+    // ** COUNT LOVE ALBUM
+    var countlovealbum = (List<Soundwave_Music.Models.Album_Love_React>)ViewBag.CountLoveAlbum;
+    // ** TRENDING
+    var trending = (List<Soundwave_Music.Models.Album>)ViewBag.Trending;
+}
+
+<link href="~/Content/my_css/ticker-style.css" rel="stylesheet" />
+@section scripts{
+    <script src="~/Scripts/my_js/regular_slide.js"></script>
+    <script src="~/Scripts/my_js/jquery.ticker.js"></script>
+    <script src="~/Scripts/my_js/custom_ticker.js"></script>
+}
+<section class="margin_mobile_fixed">
+    <!-- Trending Area Start -->
+    <div class="trending-area fix">
+        <div class="container mt-10px">
+            <div class="trending-main">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="trending-tittle">
+                            <strong>Trending now</strong>
+                            <!-- <p>Rem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                            <div class="trending-animated">
+                                <ul id="js-news" class="js-hidden">
+                                    @foreach (var item in trending)
+                                    {
+                                        <li class="news-item"><a class="limit_lenght_trendingnow" href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})">@item.Album_name</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Trending Area End -->
+    <div class="container mt-10px news_slider_slick top_news_off_m">
+        <h3 class="widget-title mb-10px">TOP ALBUMS OF MONTH</h3>
+        <section class="regular slider">
+            @foreach (var item in topalbumofmoth)
+            {
+                <div class="news_slider">
+                    <a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})">
+                        <img src="@item.Image">
+                        <div class="weekly-caption">
+                            <h4>
+                                <span class="color1">@item.Singer.Singer_name</span>
+                                <span class="description_news_carowsel">@item.Album_name</span>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+            }
+        </section>
+    </div>
+    <!-- Whats New Start -->
+    <section class="whats-news-area pb-20 ">
+        <div class="container">
+            <div class="row pt-2 bt-1px">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12 bb-1px">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-12">
+                                    <div class="section-tittle">
+                                        <h3>TOP LOVED ALBUMS</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                @foreach (var item in toplovedalbum)
+                                {
+                                    <div class="col-lg-4">
+                                        <div class="single-what-news mb-100">
+                                            <div class="what-img">
+                                                <a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})"><img src="@item.Image" alt=""></a>
+                                            </div>
+                                            <div class="what-cap">
+                                                <span class="color2">
+                                                    <a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})">
+                                                        @item.Album_name
+                                                    <i class="ms-2 me-1 fa fa-heart" aria-hidden="true"></i>
+                                                    @{
+                                                        int count__love = 0;
+                                                    }
+                                                    @foreach (var love in countlovealbum)
+                                                    {
+                                                        if (love.Album_id == item.Album_id)
+                                                        {
+                                                            count__love++;
+                                                        }
+                                                    }
+
+                                                    @(count__love)
+                                                </a>
+                                            </span>
+                                            <h4><a href="#">@item.Singer.Singer_name</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-2">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-lg-3">
+                                    <div class="section-tittle">
+                                        <h3>NEW RELEASE</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            @foreach (var item in albumnewrelease)
+                            {
+                                DateTime dateTime = DateTime.Now;
+                                <div class="col-12 col-lg-12 blog-paralle">
+                                    <div class="type-post">
+                                        <div class="entry-cover">
+                                            <a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})"><img src="@item.Image" alt="Post" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})" class="font_roboto_medium">@item.Album_name</a>
+                                            <span class="me-2 fs-14px"><a href="#" class="font_roboto_medium text-muted">@item.Singer.Singer_name</a></span>
+                                            @{
+                                                DateTime seconds = item.Create_date.AddSeconds(60);
+                                                DateTime minutes_1 = item.Create_date.AddMinutes(60);
+                                                DateTime hour_1 = item.Create_date.AddHours(24);
+                                                DateTime date = item.Create_date.AddDays(30);
+                                                DateTime months = item.Create_date.AddMonths(12);
+                                            }
+                                            @if (seconds > DateTime.Now)
+                                            {
+                                                if ((item.Create_date.Minute < DateTime.Now.Minute))
+                                                {
+                                                    <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @((DateTime.Now.Second - item.Create_date.Second) +60) seconds ago</span>
+                                                }
+                                                else
+                                                {
+                                                    <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @(DateTime.Now.Second - item.Create_date.Second) seconds ago</span>
+                                                }
+                                            }
+                                            else if (minutes_1 > DateTime.Now)
+                                            {
+                                                if ((item.Create_date.Hour < DateTime.Now.Hour) || (item.Create_date.Day < DateTime.Now.Day))
+                                                {
+                                                    <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @((DateTime.Now.Minute - item.Create_date.Minute)+60) minutes ago</span>
+                                                }
+                                                else
+                                                {
+                                                    <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @(DateTime.Now.Minute - item.Create_date.Minute) minutes ago</span>
+                                                }
+                                            }
+                                            else if (hour_1 > DateTime.Now)
+                                            {
+                                                if (item.Create_date.Day < DateTime.Now.Day)
+                                                {
+                                                    <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @((DateTime.Now.Hour - item.Create_date.Hour)+24) hours ago</span>
+                                                }
+                                                else
+                                                {
+                                                    <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @(DateTime.Now.Hour - item.Create_date.Hour) hours ago</span>
+                                                }
+                                            }
+                                            else if (date > DateTime.Now)
+                                            {
+                                                if ((item.Create_date.Month < DateTime.Now.Month))
+                                                {
+                                                    <span class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @((DateTime.Now.Day - item.Create_date.Day)+30) days ago</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @(DateTime.Now.Day - item.Create_date.Day) days ago</span>
+                                                }
+                                            }
+                                            else if (months > DateTime.Now)
+                                            {
+                                                if ((item.Create_date.Year < DateTime.Now.Year))
+                                                {
+                                                    <span class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @((DateTime.Now.Month - item.Create_date.Month)+12) months ago</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @(DateTime.Now.Month - item.Create_date.Month) months ago</span>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <span href="#" class="text-muted fs-14px"><i class="fa fa-clock-o"></i> @item.Create_date.ToString("dd/MM/yyyy")</span>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 widget-area">
+                    <!-- Widget : Latest Post -->
+                    <aside class="widget widget_latestposts bb-1px">
+                        <h3 class="widget-title">HOT ALBUMS</h3>
+                        <div class="col-lg-12 mt-2">
+                            @foreach (var item in hotalbum)
+                            {
+                                <div class="trand-right-single d-flex">
+                                    <div class="trand-right-img">
+                                    </div>
+                                    <div class="trand-right-cap" style="text-align:center">
+                                        <a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})"><img src="@item.Image" alt="@item.Album_id" class="rounded-circle" style="height: 70% !important; width: auto !important"></a>
+                                        <br />
+                                        <a href="#"><span class="color3">@item.Singer.Singer_name</span></a>
+                                        <h4><a href="@Url.Action("AlbumDetail", "GuestAlbum", new {id = item.Album_id})">@item.Album_name</a></h4>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </aside>
+                </div><!-- Widget Area /- -->
+            </div>
+        </div>
+    </section>
+    <!-- Whats New End -->
+</section>

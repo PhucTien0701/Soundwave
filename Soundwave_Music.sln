@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soundwave_Music", "Soundwave_Music\Soundwave_Music.csproj", "{9FBB86B5-5FA4-42E9-B0D4-8D828B6226A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FBB86B5-5FA4-42E9-B0D4-8D828B6226A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBB86B5-5FA4-42E9-B0D4-8D828B6226A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBB86B5-5FA4-42E9-B0D4-8D828B6226A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBB86B5-5FA4-42E9-B0D4-8D828B6226A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32F83988-BD64-4EE1-989C-0D30A98FBBAA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,67 @@
+﻿@using Soundwave_Music.Common.Helper
+@using PagedList.Mvc;
+@model Soundwave_Music.Models.Playlist
+@{
+    ViewBag.Title = Model.Playlist_name;
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    // ** List songs in album
+    var listplaylistsongs = (List<Soundwave_Music.Models.PlaylistSong>)ViewBag.SongInPlaylist;
+}
+<link href="~/Content/my_css/musicstyle.css" rel="stylesheet" />
+
+<!-- section -->
+@section scripts{
+    <!--music player-->
+    <script src="~/Scripts/my_js/musicplayercontrol.js"></script>
+}
+<!--Start section-->
+<section class="margin_mobile_fixed">
+    <div class="container mt-20px mb-20px">
+        <div class="row">
+            <!--start blog-->
+            <div class="col-xl-8">
+                <div class="boder_sidebar">
+                    <div class="blog_section">
+                        <div>
+                            <p class="blog_head">@Model.Playlist_name</p>
+                            <div class="post_info d-flex mt-20px">
+                                <div class="pe-2" style="color:#999"><i class="fa fa-clock-o" aria-hidden="true"></i>@Model.Create_date</div>
+                            </div>
+                            <div class="pe-2" style="text-align:center"><img src="@Model.User.Avatar" class="rounded-circle" style="width: 10% !important; height: auto !important;" /><a href="#" style="color:#005ec4"><br />Playlist Owner: @Model.User.Full_name</a></div>
+                        </div>
+                        <!--begin::Album information-->
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Playlist Information</span>
+                            </h4>
+                            <div class="content_raw">
+                                <p>
+                                    Playlist Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Playlist_name <br />
+                                    Create At:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Create_date.ToString("dd-MM-yyyy") <br />
+                                    Create By:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Create_by <br />
+                                </p>
+                            </div>
+                            <br />
+                            <div class="content_raw" style="text-align:center">
+                                <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+                                    <div class="simp-playlist">
+                                        <ul>
+                                            @foreach (var listsongs in listplaylistsongs)
+                                            {
+                                                <li><span class="simp-source" data-src="@listsongs.Song.Music_File_Upload">@listsongs.Song.Song_name</span><span class="simp-desc">@listsongs.Song.Singer.Singer_name</span></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="simp-footer">Playlist: @Model.Playlist_name</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Album information-->
+                    </div>
+                </div>
+            </div>
+            <!--end blog-->
+        </div>
+    </div>
+</section>
+<!-- end section -->

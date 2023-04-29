@@ -1,0 +1,174 @@
+﻿@model Soundwave_Music.DataTransferObjectives.DTOofVIP
+@using Soundwave_Music.Common
+@using Soundwave_Music.Common.Helper
+@{
+    ViewBag.Title = "Vip Detail";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var culture = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+}
+@section scripts{
+    <script src="~/Scripts/my_js/product/detail.js"></script>
+}
+<div class="product_detail">
+    <!--begin::Container-->
+    <div class="container margin_mobile_fixed">
+        <!--begin::Row-->
+        <div class="boderproductdetail mb-30px min-h-img_pdetail">
+            <div class="row">
+                <!--begin::Col-->
+                <div class="col-lg-5 col-md-5 h_pduct_detail">
+                    <div class="p-3">
+                        <div>
+                            <!--begin::Pic-->
+                            <div class="item">
+                                @if (Model.Image != null)
+                                {
+                                    <a data-fslightbox href="@Model.Image">
+                                        <img src="@Model.Image" />
+                                    </a>
+                                }
+                            </div>
+                            <!--end::Pic-->
+                        </div>
+                        <!--end::product detail images-->
+                    </div>
+                </div>
+                <!--begin::Col-->
+                <div class="col-lg-7 col-md-7">
+                    <div class="p-3">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Product Name-->
+                            <div class="product-heading">
+                                <p class="name_product_detail">@Model.product_name </p>
+                            </div>
+                            <!--end::Product Name-->
+                            <!--begin::Product Detail Price-->
+                            <div class="price_product_detail">
+                                <span class="new_price_detail">@Model.price.ToString("#,###₫", culture.NumberFormat)</span>
+                                <br />
+                            </div>
+                            <!--begin::Detail Content-->
+                            <div class="detail-contant">
+                                <!--begin::Form-->
+                                <form class="cart" method="post" action="#">
+                                    @if (Model.quantity.Trim() != "0")
+                                    {
+                                        if (User.Identity.IsAuthenticated && User.Identity.GetRole() != 2)
+                                        {
+                                            <a class="btn bg-danger">For Users</a>
+                                        }
+                                        else
+                                        {
+                                            <a id="btnAddToCart" data-id="@Model.product_id" class="btn bg-button ms-1">Add to cart</a>
+                                            <!--end::Add to Cart-->
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <!--begin::Add to Cart-->
+                                        <div class="quantity">
+                                            <input min="0" max="0" name="quantity" value="0" title="số lượng" class="input-text qty text" size="4" type="number">
+                                        </div>
+                                        <a class="btn btn-secondary ms-2" target="_blank" href="https://www.messenger.com/t/109633994706435/">Contact</a>
+                                        <!--end::Add to Cart-->
+                                    }
+                                </form>
+                                <!--begin::Form-->
+                            </div>
+                            <!--end::Detail Content-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                </div>
+            </div>
+            <!--end:Row-->
+            <!--end product-->
+        </div>
+        <!--end::Row-->
+        <!--begin::View Product decription-->
+        <div class="modal fade popup_detail_desc" id="popupmodal_detail_decription" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--begin::Modal Content-->
+                <div class="modal-content">
+                    <!--begin::Modal Header-->
+                    <div class="modal-header">
+                        <p class="modal-title center h6" id="exampleModalLongTitle">Description: @Model.product_name</p>
+                        <a href="#" class="close bg-transparent" data-dismiss="modal" aria-label="Close">
+                            <span class="material-icons" aria-hidden="true">close</span>
+                        </a>
+                    </div>
+                    <!--end::Modal Header-->
+                    <div class="modal-body detail_decs_product">
+                        @Html.Raw(Model.description)
+                    </div>
+                    <!--begin::Modal Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    <!--begin::Modal Footer-->
+                </div>
+                <!--end::Modal Content-->
+            </div>
+        </div>
+        <!--end::View Product decription-->
+        <!--begin::Row-->
+        <div class="boderproductdetail">
+            <div class="row pb-3">
+                <div class="col-md-12">
+                    <div class="pd_productdetail">
+                        <div class="full">
+                            <!--begin::Tab Bars-->
+                            <div class="tab_bar_section">
+                                <!--begin::Nav Tabs-->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <!--begin::Nav Item-->
+                                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#description">Mô tả sản phẩm</a> </li>
+                                    <li class="nav-item"> <a class="nav-link " data-toggle="tab" href="#specs">Thông số kĩ thuật</a> </li>
+                                    <!--end::Nav Item-->
+                                </ul>
+                                <!--end::Nav Tabs-->
+                                <!--begin::Tab Content-->
+                                <div class="tab-content">
+                                    <!--begin::Tab Panel-->
+                                    <div id="description" class="tab-pane active">
+                                        @if (Model.description == "" || Model.description == null)
+                                        {
+                                            <div>Updating</div>
+                                        }
+                                        else
+                                        {
+                                            <!--begin::Decription-->
+                                            <div class="product_desc" style="padding:0 4rem;">
+                                                @Html.Raw(Model.description)
+                                            </div>
+                                            <!--end::Decription-->
+                                            <div class="bg-article"></div>
+                                            <!--begin::View More Decription-->
+                                            <a href="#" data-toggle="modal" data-target="#popupmodal_detail_decription">
+                                                <span class="btn-detail btn-short-spec not-have-instruction d-flex center btn_detail_decription">
+                                                    <span style="font-family: Roboto-Regular;margin-top: 7px;">Xem thêm nội dung</span><span class="material-icons">keyboard_arrow_down</span>
+                                                </span>
+                                            </a>
+                                            <!--end::View More Decription-->
+                                        }
+                                    </div>
+                                    <!--end::Tab Panel-->
+
+                                </div>
+                                <!--end::Tab Content-->
+                            </div>
+                            <!--end::Tab Bars-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end::Row-->
+        <!--begin::Row-->
+        <!--end::Row-->
+    </div>
+    <!--end::Container-->
+</div>
+
+

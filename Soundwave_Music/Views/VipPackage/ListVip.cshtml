@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "List VIP Package";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+    var listvippackage = (List<Soundwave_Music.Models.Product>)ViewBag.VIPPackage;
+}
+<section class="margin_mobile_fixed">   
+    <!-- Whats New Start -->
+    <section class="whats-news-area pb-20 ">
+        <div class="container">
+            <div class="row pt-2 bt-1px">
+                <div class="col-lg-8">
+                    <div class="row">                        
+                        <div class="col-lg-12 mt-2">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-lg-3">
+                                    <div class="section-tittle">
+                                        <h3>VIP Package</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            @foreach (var item in listvippackage)
+                            {
+                                <div class="col-12 col-lg-12 blog-paralle">
+                                    <div class="type-post">
+                                        <div class="entry-cover">
+                                            <a href="/product/@item.slug"><img src="@item.image" alt="Post" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <a href="/product/@item.slug" class="font_roboto_medium">@item.product_name</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Whats New End -->
+</section>
+
+

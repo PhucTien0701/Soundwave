@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Soundwave_Music.Models.Area>
+@foreach (var item in Model)
+{
+    <li>
+        <a href="@Url.Action("Genre", "UserSong", new {id = item.Area_id})">@item.Area_name</a>
+        <a href="@Url.Action("ListAllSong", "UserSong")">List All Songs</a>
+        <a href="@Url.Action("TopSong", "UserSong")">Top Hit Song</a>
+        <a href="@Url.Action("TopLovedSong", "UserSong")">Top Loved Song</a>
+        <a href="@Url.Action("HotSong", "UserSong")">Top Hot Song</a>
+    </li>
+}

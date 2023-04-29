@@ -1,0 +1,75 @@
+﻿@using Soundwave_Music.Common.Helper
+@model Soundwave_Music.Models.Playlist
+@{
+    ViewBag.Title = "My Playlist Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var getmyplaylist = (List<Soundwave_Music.Models.Playlist>)ViewBag.GetPlaylist;
+}
+@if (User.Identity.GetRole() == 2)
+{
+    <section class="margin_signin">
+        <!--begin::Container-->
+        <div class="container margin_mobile_fixed">
+            <!--begin::Row-->
+            <div class="row justify-content-sm-center h-100">
+                <div class="col-lg-5 col-xl-4 col-md-6 col-12">
+                    <!--begin::Card-->
+                    <div class="boder_account" style="background-color:yellow">
+                        <div class="card-body">
+                            <p class=" card-title h4 mb-2 center text-uppercase font_roboto_medium">PLEASE UPGRADE YOUR USER ACCOUNT </p>
+                        </div>
+                        <!--begin:Action-->
+                        <div class="card-footer py-3 border-0">
+                            <div class="text-center">
+                                You have got any user account?
+                                <!--begin:Button-->
+                                <a href="#" class="font_roboto_bold">UPGRADE ?</a>
+                                <!--end:Button-->
+                            </div>
+                        </div>
+                        <!--end:Action-->
+                    </div>
+                    <!--end::Card-->
+                </div>
+            </div>
+            <!--begin::Row-->
+        </div>
+        <!--end::Container-->
+    </section>
+
+}
+@if (User.Identity.GetRole() == 3 || User.Identity.GetRole() == 1)
+{
+    <div class="mt-20px margin_mobile_fixed">
+        <div class="container">
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h1 style="margin-top: 30px; font-size: 18px">MY PLAYLIST</h1>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Playlist ID</th>
+                                <th>Playlist Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in getmyplaylist)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("PlaylistDetail", "MyPlaylist", new {id = item.Playlist_id})">@item.Playlist_id</a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("PlaylistDetail", "MyPlaylist", new {id = item.Playlist_id})">@item.Playlist_name</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

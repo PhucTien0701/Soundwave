@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!--begin::Header-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--mobile metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--site metas-->
+    <title>@ViewBag.Title</title>
+    <!--thumbnail on sharing-->
+    <meta property="og:image" content="@ViewBag.ImageURL">
+    <meta property="og:type" content="article" />
+    <meta name="keywords" content="@ViewBag.Tag">
+    <meta name="description" content="@ViewBag.Decription">
+    <link rel="icon" href="/Images/ImagesCollection/favicon.png" type="image/png" />
+    <link href="~/Content/my_css/css-loader.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--font icon-->
+    @Styles.Render("~/bundles/font-awesome")
+    <!--image slide-->
+    @Styles.Render("~/bundles/owl")
+    <!---->
+    @Styles.Render("~/bundles/jquery-ui")
+    <!--style css boostrapmin-->
+    @Styles.Render("~/Content/css")
+    <!--responsive website-->
+    @Styles.Render("~/bundles/responsiveweb")
+    <!--color-->
+    @Styles.Render("~/bundles/colorsweb")
+    <!--toast-->
+    @Styles.Render("~/bundles/toasts")
+    <link href="~/Content/my_css/slick.css" rel="stylesheet" />
+    <link href="~/Content/my_css/slick-theme.css" rel="stylesheet" />
+    <link href="~/Content/my_css/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/Content/my_css/css-loader2.css" rel="stylesheet" />
+</head>
+<!--end::Header-->
+<!--begin::body-->
+<body>
+    <!--begin::header-->
+    <header id="default_header" class="header_style_1  fw-normal small-screen">
+        @Html.Partial("_Header")
+    </header>
+    <!--end::header-->
+    <!--begin::Modal first loadpage -->
+    <div class="row center">
+        <div id="my-welcome-message">
+            <h2>Wellcome to Soundwave Music</h2>
+            <p>-This is a demo website </p>
+            <p class="text-danger">(*)This website is not used for comercial purpose</p>
+        </div>
+    </div>
+    <!--end::Modal first loadpage -->
+    <!--back top top-->
+    <a onclick="topFunction()" class="fadeshow2" id="myBtn">
+        <span class="material-icons">arrow_upward</span>
+    </a>
+    <!--end::back to top-->
+    @RenderBody()
+    @Html.Partial("_MessageAlert")
+    <!--begin::footer -->
+    <footer class="footer_style_2">
+        @Html.Partial("_Footer")
+    </footer>
+    <!--end::footer-->
+
+    <!--General scripts-->
+    @Scripts.Render("~/bundles/poppermin")
+    <!---->
+    <script src="~/Scripts/my_js/bootstrap.bundle.js"></script>
+    <!---->
+    @Scripts.Render("~/bundles/jquerymin")
+    <!---->
+    @Scripts.Render("~/bundles/jqueryvalidation")
+    <!---->
+    @Scripts.Render("~/bundles/jqueryui")
+    <!---->
+    @Scripts.Render("~/bundles/jqueryinputmask")
+    <!---->
+    @Scripts.Render("~/bundles/bootstrapmin")
+    <!--script full image screen-->
+    @Scripts.Render("~/bundles/fslightbox")
+    <!---->
+    <!--image slide-->
+    @Scripts.Render("~/bundles/carouselmin")
+    <!--include::toastr - sweet alert 2 - jquery toast-->
+    @Scripts.Render("~/bundles/toast")
+    <!---->
+    @Scripts.Render("~/bundles/backtotop")
+    <!---->
+    @Scripts.Render("~/bundles/common")
+    <!--custom notification-->
+    @Scripts.Render("~/bundles/customtoastr")
+    <!--custom search: suggesst song-->
+    @Scripts.Render("~/bundles/customsearch")
+    @Scripts.Render("~/bundles/firstloadpage")
+    <!--slider image-->
+    <script src="~/Scripts/my_js/slick.js"></script>
+    <!--signalr-->
+    <script src="~/Scripts/jquery.signalR-2.4.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/my_js/count_visited.js"></script>
+    <!--signalr-->
+    <!--search song-->
+    <script src="~/Scripts/my_js/search_song.js"></script>
+    <!--search album-->
+    <script src="~/Scripts/my_js/search_album.js"></script>
+    <!--fixed item-->
+    <script src="~/Scripts/my_js/sticky.compile.js"></script>
+    <!--bootstrap scripts-->
+    <!--end:: script-->
+    @RenderSection("scripts", required: false)
+</body>
+<!--end::body-->
+</html>

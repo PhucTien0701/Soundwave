@@ -1,0 +1,73 @@
+﻿@using PagedList
+@model IPagedList<Soundwave_Music.Models.News>
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section scripts {
+    <script src="~/Scripts/my_js/search_news.js"></script>
+}
+<section class="blog_area margin_mobile_fixed">
+    <div class="container mb-20px">
+        <div class="d-flex justify-content-between breadcumb_news">
+            <div class="">
+                <h4>MUSIC NEWS</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    @if (Model.Count == 0)
+                    {
+                        <span class="h2 text-danger center mt-100px">There is no news</span>
+                    }
+                    else
+                    {
+                        <div class="row">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-6">
+                                    <a href="@Url.Action("NewsDetail","NewsHome",new {id = item.News_id})">
+                                        <article class="blog_item">
+                                            <div class="blog_item_img">
+                                                <img class="card-img rounded-0" src="@item.Image">
+                                            </div>
+                                            <div class="blog_details">
+                                                <h2>@item.News_title</h2>
+                                                <ul class="blog-info-link text-muted">
+                                                    @item.Create_date.ToString("dd-MM-yyyy")
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            @if (ViewBag.Countpost == 10)
+                            {
+                                @Html.Partial("_Paging", Model)
+                            }
+                        </nav>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_right_sidebar">
+                    <aside class="single_sidebar_widget search_widget">
+                        <form action="@Url.Action("SearchNewsResult", "NewsHome")">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="search" class="form-control" name="searchnews" placeholder='Search News ...' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search news ...'">
+                                    <div class="input-group-append">
+                                        <button class="btns" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,194 @@
+﻿@using Soundwave_Music.Common.Helper
+@model Soundwave_Music.Models.Song
+@{
+    ViewBag.Title = "TOP SONG";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var topvietnamsong = (List<Soundwave_Music.Models.Song>)ViewBag.TopVietnamSong;
+    var topusuksong = (List<Soundwave_Music.Models.Song>)ViewBag.TopUSUKSong;
+    var topkoreasong = (List<Soundwave_Music.Models.Song>)ViewBag.TopKoreaSong;
+    var topjapansong = (List<Soundwave_Music.Models.Song>)ViewBag.TopJapanSong;
+    var topchinasong = (List<Soundwave_Music.Models.Song>)ViewBag.TopChinaSong;
+}
+<div class="mt-20px margin_mobile_fixed">
+    <div class="container">
+        @if (User.Identity.GetRole() == 2)
+        {
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h1 style="margin-top: 30px">TOP 5 VIETNAM SONG</h1>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Song Name</th>
+                                <th>Singer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in topvietnamsong)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </td>
+                                    <td><a href="#">@item.Singer.Singer_name</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h2>TOP 5 VIETNAM SONG</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Song Name</th>
+                                <th>Singer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in topvietnamsong)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </td>
+                                    <td><a href="#">@item.Singer.Singer_name</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h2>TOP 5 USUK SONG</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Song Name</th>
+                                <th>Singer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in topusuksong)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </td>
+                                    <td><a href="#">@item.Singer.Singer_name</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h2>TOP 5 Korea SONG</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Song Name</th>
+                                <th>Singer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in topkoreasong)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </td>
+                                    <td><a href="#">@item.Singer.Singer_name</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h2>TOP 5 JAPAN SONG</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Song Name</th>
+                                <th>Singer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in topjapansong)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </td>
+                                    <td><a href="#">@item.Singer.Singer_name</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+            <div class="row boderproductdetail news_list_section" style="text-align:center">
+                <div class="container">
+                    <h2>TOP 5 CHINA SONG</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Song Name</th>
+                                <th>Singer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in topchinasong)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("SongDetail", "UserSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </td>
+                                    <td><a href="#">@item.Singer.Singer_name</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!-- end content song -->

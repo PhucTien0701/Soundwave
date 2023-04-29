@@ -1,0 +1,521 @@
+﻿@using Soundwave_Music.Common.Helper
+@using PagedList.Mvc;
+@model Soundwave_Music.Models.Video
+@{
+    ViewBag.Title = Model.Video_name;
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewBag.Title = Model.Video_name;
+    ViewBag.ImageURL = Model.Image;
+    // ** Related Video
+    var relatedvideo = (List<Soundwave_Music.Models.Video>)ViewBag.RelatedVideo;
+    // ** Relate Video Genre
+    var relatevideogenre = (List<Soundwave_Music.Models.Video>)ViewBag.RelatedVideoGenre;
+    // ** Comment Video
+    var videocomment = (PagedList.PagedList<Soundwave_Music.Models.Video_Comment>)ViewBag.VideoComment;
+    // ** Like Comment Video
+    var likecommentvideo = (List<Soundwave_Music.Models.Like_Video_Comment>)ViewBag.VideoCommentLike;
+    // ** Love Video
+    var lovevideo = (List<Soundwave_Music.Models.Video_Love_React>)ViewBag.ReactLoveVideo;
+    // ** New Video Release
+    var newvideorelease = (List<Soundwave_Music.Models.Video>)ViewBag.NewVideoRelease;
+}
+<link href="~/Content/my_css/summernote-bs4.min.css" rel="stylesheet" />
+<!-- section -->
+@section scripts{
+    <!--comment frame-->
+    <script src="~/Scripts/my_js/summernote-bs4.min.js"></script>
+    <script src="~/Scripts/my_js/summernote-vi-VN.js"></script>
+    <!--script song comment-->
+
+    <script>
+        $(document).ready(function () {
+            $('.form_comment_post').summernote({
+                height: 100,
+                placeholder: 'How are you feeling...',
+            });
+
+            $('.close').click(function () {
+                $('.note-modal').modal('hide');
+            })
+
+            $('.note-toolbar .note-table,.note-toolbar .note-color,.note-toolbar .note-fontname,.note-toolbar .note-font,.note-toolbar .note-icon-question, .note-toolbar .note-style:first, .note-toolbar .note-para, .note-toolbar .note-view').remove();
+
+            $(".note-editing-area,.request_login").click(function (ev) {
+                ev.preventDefault();
+                $('#create_submit_comment').removeAttr('hidden');
+                $.get("/User/UserLogged", {},
+                    function (isLogged, textStatus, jqXHR) {
+                        if (!isLogged) {
+                            bootbox.confirm({
+                                message: "Please sign in to use this function!",
+                                buttons: {
+                                    confirm: {
+                                        label: 'Sign In',
+                                        className: 'btn-info'
+                                    },
+                                    cancel: {
+                                        label: 'Back',
+                                        className: 'btn-secondary'
+                                    }
+                                },
+                                callback: function (result) {
+                                    if (result) {
+                                        window.location = "/User/SignIn";
+                                    }
+                                }
+                            });
+                        }
+                    },
+                    "json"
+                );
+            });
+            //Add comment
+            $('#create_submit_comment').click(function () {
+                var com_content = $("#comment__con").val();
+                if (com_content == "") {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top',
+                        showConfirmButton: false,
+                        timer: 2000,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+                    Toast.fire({
+                        icon: 'warning',
+                        title: 'Please input comment content'
+                    })
+                    return false;
+                }
+                else if (com_content.length < 20) {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+                    Toast.fire({
+                        icon: 'warning',
+                        title: 'Comment content has at least 20 characters'
+                    })
+                    return false;
+                }
+                else if (com_content.length > 500) {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+                    Toast.fire({
+                        icon: 'warning',
+                        title: 'Comment content do not more than 500 characters'
+                    })
+                    return false;
+                }
+                else {
+                    var data = $("#create_comment_post").serialize();
+                    $.ajax({
+                        type: "GET",
+                        url: "/UserVideo/CommentVideo",
+                        data: data,
+                        success: function (result) {
+                            if (result == true) {
+                                var find_text = $('#create_comment_post')
+                                find_text.find('.note-editable').text('')
+                                $('#create_comment_post').val('')
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: 'top',
+                                    showConfirmButton: false,
+                                    timer: 2000,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: 'Comment successfully'
+                                })
+                            }
+                            else {
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: 'top',
+                                    showConfirmButton: false,
+                                    timer: 1000,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: 'Error'
+                                })
+                            }
+                        }
+                    })
+                };
+            });
+        });
+    </script>
+
+
+    <script>
+        var Like_Comment = function (cmt_id, count_like_cmt) {
+            var id = cmt_id
+            var count_like = count_like_cmt
+            $.ajax({
+                type: "POST",
+                url: '/UserVideo/LikeCommentVideo',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({ videocomment_id: id }),
+                dataType: "json",
+                success: function (result) {
+                    if (result == true) {
+                        $('#BtnReacton_' + id + '').attr('onclick', 'Remove_Like_Comment(' + id + ',' + (count_like + 1) + ')' + '');
+                        $('#BtnReacton_' + id + '').text('Unlike');
+                        $('#sumlike_cmt_' + id + '').text('(' + (count_like + 1) + ')');
+                    }
+                    else {
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top',
+                            showConfirmButton: false,
+                            timer: 1500,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+                        Toast.fire({
+                            icon: 'error',
+                            title: 'Fail'
+                        })
+                    }
+                },
+                error: function () {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+                    Toast.fire({
+                        icon: 'danger',
+                        title: 'Fail'
+                    })
+                }
+            });
+        }
+        // remove reaction comment post
+        var Remove_Like_Comment = function (cmt_id, count_like_cmt) {
+            var id = cmt_id
+            var count_like = count_like_cmt
+            $.ajax({
+                type: "POST",
+                url: '/UserVideo/LikeCommentVideo',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({ videocomment_id: id }),
+                dataType: "json",
+                success: function (result) {
+                    if (result == true) {
+                        $('#BtnReacton_' + id + '').attr('onclick', 'Like_Comment(' + id + ',' + (count_like - 1) + ')' + '');
+                        $('#BtnReacton_' + id + '').text('Like');
+                        $('#sumlike_cmt_' + id + '').text('(' + (count_like - 1) + ')');
+                    }
+                    else {
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top',
+                            showConfirmButton: false,
+                            timer: 1500,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+                        Toast.fire({
+                            icon: 'error',
+                            title: 'Fail'
+                        })
+                    }
+                },
+                error: function () {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+                    Toast.fire({
+                        icon: 'danger',
+                        title: 'Fail'
+                    })
+                }
+            });
+        }
+    </script>
+
+}
+<!--Start section-->
+<section class="margin_mobile_fixed">
+    <div class="container mt-20px mb-20px">
+        <div class="row">
+            <!--start blog-->
+            <div class="col-xl-8">
+                <div class="boder_sidebar">
+                    <div class="blog_section">
+                        <div>
+                            <p class="blog_head">@Model.Video_name</p>
+                            <div class="post_info d-flex mt-20px">
+                                <div class="pe-2" style="color:#999"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;@(ViewBag.CountLoveVideo)</div>
+                                <div class="pe-2" style="color:#999"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;@Model.View_count</div>
+                                <div class="pe-2" style="color:#999"><i class="fa fa-clock-o" aria-hidden="true"></i>@Model.Release_date</div>
+                            </div>
+                            <div class="pe-2" style="text-align:center"><img src="@Model.Singer.Image" class="rounded-circle" style="width: 10% !important; height: auto !important;" /><a href="#" style="color:#005ec4"><br />@Model.Singer.Singer_name</a></div>
+                        </div>
+                        <!--begin::Video information-->
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Video Information</span>
+                            </h4>
+                            <div class="content_raw">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <div class="imagesize" style="text-align:center">
+                                                <img style="height: 40% !important; width:auto !important" src="@Model.Image" />
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                Singer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Singer.Singer_name <br />
+                                                Composer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Composer.Composer_name <br />
+                                                Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Genre.Genre_name <br />
+                                                Supplier:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Supplier.Supplier_name <br />
+                                                Area:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Area.Area_name <br />
+
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="content_raw" style="text-align:center">
+                                <video width="100%" height="500" controls="controls" autoplay>
+                                    <source src="@Model.Video_File_Upload" type="video/mp4" />
+                                </video>
+                            </div>
+                            <!--Start Video lyric-->
+                            <div>
+                                <div class="title_sidebar">
+                                    <span class="title_sidebar_content">Video Lyric</span>
+                                </div>
+                                <div class="mt-1 mb-1 content_com">
+                                    <p>
+                                        @Html.Raw(Model.Lyric)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Video information-->
+                        <div class="comment_section">
+                        </div>
+                        <div class="view_commant">
+                            <div class="post_commt_form mb-4">
+                                <div class="font_roboto_medium fs-18px">@(ViewBag.countcomment) Comment </div>
+                                <div class="form_section">
+                                    <form class="form_contant" id="create_comment_post">
+                                        <fieldset class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form_comment mb-2">
+                                                <input type="hidden" name="Video_id" placeholder="How are you feeling..." value="@Model.Video_id" />
+                                                <textarea class="form-control form_comment_post " id="comment__con" name="commentcontent"></textarea>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <a href="@Url.Action("VideoDetail", "UserVideo", new {id = @Model.Video_id})" class="btn bg-button" id="create_submit_comment">Send</a>
+                                                }
+                                                else
+                                                {
+                                                    <button class="btn bg-button" disabled>Send</button>
+                                                }
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            @foreach (var comment in videocomment)
+                            {
+                                <div class="row mb-2">
+                                    <div class="col-2 col-md-1 pe-0">
+                                        <div class="full text-left text-md-right"><img style="object-fit: cover;width:40px!important;height:40px!important;" src="@comment.User.Avatar" alt="#"> </div>
+                                    </div>
+                                    <div class="col-12 col-md-11">
+                                        <div class="full command_cont">
+                                            <p class="comm_head">
+                                                @comment.User.Full_name
+                                            </p>
+                                            <div class="mt-1 mb-1 content_com">
+                                                <p>
+                                                    @Html.Raw(comment.Content)
+                                                </p>
+                                            </div>
+                                            <div class="fs-13px user-select-none">
+                                                <span class="material-icons fs-6px text-secondary"> fiber_manual_record </span>
+                                                <span class="text_comment">
+                                                    <span class="like_margin material-icons fs-16px">thumb_up </span>
+                                                    @{
+                                                        int count_like_cmt = 0;
+                                                        int count_you_like_cmnt = 0;
+                                                    }
+                                                    @{
+                                                        foreach (var like in likecommentvideo)
+                                                        {
+                                                            if (comment.Video_comment_id == like.Video_comment_id && like.React_like == "1")
+                                                            {
+                                                                count_like_cmt++;
+                                                            }
+                                                            if (User.Identity.IsAuthenticated)
+                                                            {
+                                                                if (User.Identity.GetUserId() == like.User_id && comment.Video_comment_id == like.Video_comment_id)
+                                                                {
+                                                                    count_you_like_cmnt++;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    @if (User.Identity.IsAuthenticated)
+                                                    {
+
+                                                        if (count_you_like_cmnt > 0)
+                                                        {
+                                                            <a class="text_comment request_login " id="BtnReacton_@comment.Video_comment_id" onclick="Remove_Like_Comment(@comment.Video_comment_id,@count_like_cmt)" style="cursor:pointer;">Unlike</a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a class="text_comment request_login " id="BtnReacton_@comment.Video_comment_id" onclick="Like_Comment(@comment.Video_comment_id,@count_like_cmt)" style="cursor:pointer;">Like</a>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <a class="text_comment request_login" style="cursor:pointer;">Like</a>
+                                                    }
+                                                    <span id="sumlike_cmt_@comment.Video_comment_id">(@count_like_cmt)</span>
+                                                </span>
+                                                <span class="text-secondary">
+                                                    <span class="material-icons text-secondary fs-6px"> fiber_manual_record </span>
+                                                    @comment.Create_date
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="d-flex justify-content-end mb-5 pagination_comment_post">
+                                @Html.PagedListPager(videocomment, page => Url.Action("VideoDetail", new { @page = page }), new PagedListRenderOptions
+                                {
+                                    LinkToPreviousPageFormat = "‹",
+                                    LinkToNextPageFormat = "›",
+                                    DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+                                    DisplayLinkToLastPage = PagedListDisplayMode.Never,
+                                    DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded,
+                                    DisplayLinkToNextPage = PagedListDisplayMode.IfNeeded,
+                                    MaximumPageNumbersToDisplay = 5
+                                })
+                            </div>
+                        </div>
+
+                        <!--begin::related post-->
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Relate Video</span>
+                            </h4>
+                            <div class="row">
+                                @foreach (var item in relatedvideo)
+                                {
+                                    <div class="col-lg-4 col-6 mb-3">
+                                        <div class="margin_related_post"><a href="#" class="me-2 category_sidebar_url">@item.Singer.Singer_name</a><a href="@Url.Action("VideoDetail", "UserVideo", new {id = item.Video_id})"><img class="img_related_post" src="@item.Image" alt="@item.Video_id"></a></div>
+                                        <a href="@Url.Action("VideoDetail", "UserVideo", new {id = item.Video_id})" class="post-url-side-bar">
+                                            @item.Video_name
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Relate Genre</span>
+                            </h4>
+                            <div class="row">
+                                @foreach (var item in relatevideogenre)
+                                {
+                                    <div class="col-lg-4 col-6 mb-3">
+                                        <div class="margin_related_post"><a href="#" class="me-2 category_sidebar_url">@item.Singer.Singer_name</a><a href="@Url.Action("VideoDetail", "UserVideo", new {id = item.Video_id})"><img class="img_related_post" src="@item.Image" alt="@item.Video_id"></a></div>
+                                        <a href="@Url.Action("VideoDetail", "UserVideo", new {id = item.Video_id})" class="post-url-side-bar">
+                                            @item.Video_name
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <!--end::related post-->
+                    </div>
+                </div>
+            </div>
+            <!--end blog-->
+            <div class="col-xl-4">
+                <!--begin::post recent pc-->
+                <div class="side_bar_blog boder_sidebar recent_post_pc" data-sticky data-sticky-wrap data-margin-top="2" data-margin-bottom="20">
+                    <h4 class="title_sidebar">
+                        <span class="title_sidebar_content">New Videos Release</span>
+                    </h4>
+                    <div class="recent_post">
+                        <ul>
+                            @foreach (var item in newvideorelease)
+                            {
+                                <li>
+                                    <div class="post_head">
+                                        <a href="@Url.Action("VideoDetail", "UserVideo", new {id = item.Video_id})"><img src="@item.Image" alt="@item.Video_id"></a>
+                                        <a href="@Url.Action("VideoDetail", "UserVideo", new {id = item.Video_id})">@item.Video_name</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="post_date">
+                                            <a href="#" class="me-2 category_sidebar_url">@item.Singer.Singer_name</a><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
+                                            @item.Release_date
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!--end::post recent pc-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

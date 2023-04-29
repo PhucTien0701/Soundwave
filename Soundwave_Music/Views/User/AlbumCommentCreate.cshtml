@@ -1,0 +1,88 @@
+﻿@model Soundwave_Music.Models.Album_Comment
+@using Soundwave_Music.Common.Helper
+@{
+    ViewBag.Title = "Album Comment";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    using (Html.BeginForm("AlbumCommentCreate", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <!--begin::section-->
+        <section class="margin_profile margin_mobile_fixed">
+            <!--begin::container-->
+            <div class="container ">
+                <div class="center-noleftright">
+                    <!--begin::Row-->
+                    <div class="row no-gutters">
+                        <!--begin::Col-->
+                        <div class="col-12 col-lg-3 col-xl-3">
+                            @Html.Partial("UserProfileManagement")
+                        </div>
+                        <!--end::Col-->
+                        <!--begin:Edit profile-->
+                        <div class="col-12 col-lg-9 col-xl-9 mb-10px">
+                            <!--begin::User Page-->
+                            <div class="user-page">
+                                <div class="wrap_edit_profile">
+                                    <div class="page-title text-uppercase">User Information</div>
+                                </div>
+                                <!--end::Upload Pic-->
+                                <div class="user-form">
+                                    <div class="form-wrap">
+                                        <!--begin::form-->
+                                        <form method="post" class="form-wrap form_edit">
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            @Html.HiddenFor(m => m.User_id)
+                                            @Html.HiddenFor(m => m.Create_date)
+                                            <div>
+                                                <!--begin::Input form group-->
+                                                <div class="settingrow form-group mb-3">
+                                                    <!--begin::Label-->
+                                                    @Html.LabelFor(model => model.Album.Album_name, htmlAttributes: new { @class = "settinglabel control-label col-sm-4" })
+                                                    <!--end::Label-->
+                                                    <!--begin::Col-->
+                                                    <div class="col-md-8">
+                                                        @Html.DropDownListFor(model => model.Album_id, (SelectList)ViewBag.ListAlbum, "-- Choose Album --", new { @class = "form-select form-select-solid" })
+                                                        @Html.ValidationMessageFor(model => model.Album_id, "", new { @class = "text-danger" })
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <!--end::Input form group-->
+                                                <!--begin::Input form group-->
+                                                <div class="settingrow form-group mb-3">
+                                                    @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "settinglabel control-label col-sm-4" })
+                                                    <div class="col-md-8">
+                                                        @Html.TextAreaFor(model => model.Content, new { htmlAttributes = new { @class = "form-control", @placeholer = "How are you feel this album" } })
+                                                        @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <!--end::Input form group-->
+                                            </div>
+                                            <!-- end form group -->
+                                            <!--begin::Action-->
+                                            <div class="form-group clearfix ml-5">
+                                                <div class="col-sm-9 col-sm-offset-3  ">
+                                                    <!--begin::Button-->
+                                                    <button type="submit" tabindex="5" class="btn bg-button ms-120px rounded-100px">SEND</button>
+                                                    <!--end::Button-->
+                                                </div>
+                                            </div>
+                                            <!--end::Action-->
+                                        </form>
+                                    </div>
+                                    <!--end::form-->
+                                </div>
+                            </div>
+                            <!--begin::User Page-->
+                        </div>
+                        <!--end:Edit profile-->
+                    </div>
+                    <!--begin::Row-->
+                </div>
+            </div>
+            <!--end::container-->
+        </section>
+        <!--end::section-->
+    }
+}

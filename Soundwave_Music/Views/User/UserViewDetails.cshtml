@@ -1,0 +1,107 @@
+﻿@model Soundwave_Music.Models.User
+@using Soundwave_Music.Common.Helper
+@{
+    ViewBag.Title = "UserViewDetails";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <section class="margin_profile margin_mobile_fixed">
+        <!--begin::container-->
+        <div class="container ">
+            <div class="center-noleftright">
+                <!--begin::Row-->
+                <div class="row no-gutters">
+                    <!--begin::Col-->
+                    <div class="col-12 col-lg-3 col-xl-3">
+                        @Html.Partial("UserProfileManagement")
+                    </div>
+                    <!--end::Col-->
+                    <!--begin:Edit profile-->
+                    <div class="col-12 col-lg-9 col-xl-9 mb-10px">
+                        <!--begin::User Page-->
+                        <div class="user-page">
+                            <div class="wrap_edit_profile">
+                                <div class="page-title text-uppercase">User Information</div>
+                                <!--begin::Upload Pic-->
+                            </div>
+                            <!--end::Upload Pic-->
+                            <div class="user-form">
+                                <div class="form-wrap">
+                                    <!--begin::form-->
+                                    <form method="post" class="form-wrap form_edit">
+                                        <div>
+                                            <!--begin::Input form group-->
+                                            <div class="settingrow form-group mb-3">
+                                                <label class="settinglabel control-label col-sm-4">Full Name</label>
+                                                <div class="col-md-8">
+                                                    @Model.Full_name
+                                                </div>
+                                            </div>
+                                            <!--end::Input form group-->
+                                            <!--begin::Input form group-->
+                                            <div class="settingrow form-group mb-3">
+                                                <label class="settinglabel control-label col-sm-4">Email</label>
+                                                <div class="col-md-8">
+                                                    @Model.Email
+                                                </div>
+                                            </div>
+                                            <!--end::Input form group-->
+                                            <!--begin::Input form group-->
+                                            <div class="settingrow form-group mb-3">
+                                                <label class="settinglabel control-label col-sm-4">Phone Number</label>
+                                                <div class="col-md-8">
+                                                    @Model.Phone_number
+                                                </div>
+                                            </div>
+                                            <!--end::Input form group-->
+                                            <!--begin::Input form group-->
+                                            <div class="settingrow form-group mb-3">
+                                                <label class="settinglabel control-label col-sm-4">Date of birth</label>
+                                                <div class="col-md-8">
+                                                    @Model.Date_of_birth
+                                                </div>
+                                            </div>
+                                            <!--end::Input form group-->
+                                            <!--begin::Input form group-->
+                                            <div class="settingrow form-group mb-3">
+                                                <!--begin::label-->
+                                                <label class="settinglabel control-label col-sm-4">Gender</label>
+                                                <div class="col-sm-8">
+                                                    <!--begin::Choose Gender-->
+                                                    <div class="d-flex mt-1">
+                                                        @if (Model.Gender == "1")
+                                                        {
+                                                            <span class="fw-bold fs-6 text-dark">Male</span>
+                                                        }
+                                                        else if (Model.Gender == "2")
+                                                        {
+                                                            <span class="fw-bold fs-6 text-dark">Female</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="fw-bold fs-6 text-dark">Other</span>
+                                                        }
+                                                    </div>
+                                                    <!--end::Choose Gender-->
+                                                </div>
+                                            </div>
+                                            <!--end::Input form group-->
+                                        </div>
+                                        <!-- end form group -->
+                                    </form>
+                                </div>
+                                <!--end::form-->
+                            </div>
+                        </div>
+                        <!--begin::User Page-->
+                    </div>
+                    <!--end:Edit profile-->
+                </div>
+                <!--begin::Row-->
+            </div>
+        </div>
+        <!--end::container-->
+    </section>
+
+}

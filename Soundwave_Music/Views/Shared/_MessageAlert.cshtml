@@ -1,0 +1,12 @@
+﻿@using Soundwave_Music.Common.NotificationLib
+
+@if (Notification.has_noti())
+{
+    //notifi 2.5s
+    var Notifi = Notification.get_noti();
+    <input type="hidden" value="@Notifi.Soundwave_message_type" name="mgs_type" />
+    <input type="hidden" value=" @Notifi.Soundwave_message" name="mgs" />
+    //notifi 1s
+    <input type="hidden" value="@Notifi.Soundwave_message_type_1s" name="mgs_type1s" />
+    <input type="hidden" value=" @Notifi.Soundwave_message_1s" name="mgs1s" />
+}

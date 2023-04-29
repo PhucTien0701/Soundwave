@@ -1,0 +1,83 @@
+﻿<!--begin::section-->
+<section class="user-info mb-1">
+    <!--begin::Pic-->
+    <div class="avatar_profile">
+        <img alt="Avartar Image" class="rounded-circle" src="@ViewBag.Avatar" />
+    </div>
+    <!--end::Pic-->
+    <!--begin::User Name-->
+    <div class="caption">
+        <div class="title">Hello </div>
+        <div class="name">@ViewBag.UserFullName</div>
+    </div>
+    <!--end::User Name-->
+</section>
+<!--end::section-->
+<!--begin::nav-->
+<nav class="user-sidebar">
+    <!--begin::ul-->
+    <ul>
+        <!--begin::Li-->
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UserViewDetails" ? "active" : "")">
+            <a href="@Url.Action("UserViewDetails", "User")">
+                <div class="icon">
+                    <i class="material-icons">person</i>
+                </div>
+                <span>User Information</span>
+            </a>
+        </li>
+        <!--end::Li-->
+        <!--begin::Li-->
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UserEditProfile" ? "active" : "")">
+            <a href="@Url.Action("UserEditProfile", "User")">
+                <div class="icon">
+                    <i class="material-icons">edit</i>
+                </div>
+                <span>Edit User Information</span>
+            </a>
+        </li>
+        <!--end::Li-->
+        <!--begin::Li-->
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UserChangePassword" ? "active" : "")">
+            <a href="@Url.Action("UserChangePassword", "User")">
+                <div class="icon">
+                    <i class="material-icons">lock</i>
+                </div>
+                <span>Change Password</span>
+            </a>
+        </li>
+        <!--end::Li-->
+        <!--begin::Li-->
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "SongCommentCreate" ? "active" : "")">
+            <a href="@Url.Action("SongCommentCreate", "User")">
+                <div class="icon">
+                    <i class="material-icons">comment</i>&ensp;<i class="material-icons">music_note</i>
+                </div>
+                <span>Song Comment</span>
+            </a>
+        </li>
+        <!--end::Li-->
+        <!--begin::Li-->
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "AlbumCommentCreate" ? "active" : "")">
+            <a href="@Url.Action("AlbumCommentCreate", "User")">
+                <div class="icon">
+                    <i class="material-icons">comment</i>&ensp;<i class="material-icons">play_circle</i>
+                </div>
+                <span>Album Comment</span>
+            </a>
+        </li>
+        <!--end::Li-->
+        <!--begin::Li-->
+        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "VideoCommentCreate" ? "active" : "")">
+            <a href="@Url.Action("VideoCommentCreate", "User")">
+                <div class="icon">
+                    <i class="material-icons">comment</i>&ensp;<i class="material-icons">movie</i>
+                </div>
+                <span>Video Music Comment</span>
+            </a>
+        </li>
+        <!--end::Li-->
+    </ul>
+    <!--end::ul-->
+</nav>
+<!--end::nav-->

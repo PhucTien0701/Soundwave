@@ -1,0 +1,167 @@
+﻿@using Soundwave_Music.Common.Helper
+@using PagedList.Mvc;
+@model Soundwave_Music.Models.Song
+@{
+    ViewBag.Title = Model.Song_name;
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewBag.Title = Model.Song_name;
+    ViewBag.ImageURL = Model.Image;
+    // ** Related Song
+    var relatedsong = (List<Soundwave_Music.Models.Song>)ViewBag.RelatedSong;
+    // ** Relate Song Genre
+    var relatesonggenre = (List<Soundwave_Music.Models.Song>)ViewBag.RelatedSongGenre;
+    // ** Comment Song
+    var songcomment = (PagedList.PagedList<Soundwave_Music.Models.Song_Comment>)ViewBag.SongComment;
+    // ** Like Comment Song
+    var likecommentsong = (List<Soundwave_Music.Models.Like_Song_Comment>)ViewBag.ReactComment;
+    // ** Love Song
+    var lovesong = (List<Soundwave_Music.Models.Song_Love_React>)ViewBag.ReactLoveSong;
+    // ** New Song Release
+    var newsongrelease = (List<Soundwave_Music.Models.Song>)ViewBag.NewSongRelease;
+}
+<link href="~/Content/my_css/summernote-bs4.min.css" rel="stylesheet" />
+<link href="~/Content/my_css/musicplay.scss" rel="stylesheet" />
+<style>
+</style>
+<!-- section -->
+@section scripts{
+    <script>
+        var sticky = new Sticky('[data-sticky]', {});
+    </script>
+    <!--comment frame-->
+    <script src="~/Scripts/my_js/summernote-bs4.min.js"></script>
+    <script src="~/Scripts/my_js/summernote-vi-VN.js"></script>
+    <!--script song comment-->
+    <script src="~/Scripts/my_js/comment_song.js"></script>
+    <script src="~/Scripts/my_js/musicplay.js"></script>
+}
+<!--Start section-->
+<section class="margin_mobile_fixed">
+    <div class="container mt-20px mb-20px">
+        <div class="row">
+            <!--start blog-->
+            <div class="col-xl-8">
+                <div class="boder_sidebar">
+                    <div class="blog_section">
+                        <div>
+                            <p class="blog_head">@Model.Song_name</p>
+                            <div class="post_info d-flex mt-20px">
+                                <div class="pe-2" style="color:#999"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;@(ViewBag.CountLoveSong)</div>
+                                <div class="pe-2" style="color:#999"><i class="fa fa-headphones" aria-hidden="true"></i>&nbsp;@Model.View_count</div>
+                                <div class="pe-2" style="color:#999"><i class="fa fa-clock-o" aria-hidden="true"></i>@Model.Release_date</div>
+                            </div>
+                            <div class="pe-2" style="text-align:center"><img src="@Model.Singer.Image" class="rounded-circle" style="width: 10% !important; height: auto !important;" /><a href="#" style="color:#005ec4"><br />@Model.Singer.Singer_name</a></div>
+                        </div>
+                        <!--begin::song information-->
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Song Information</span>
+                            </h4>
+                            <div class="content_raw">
+                                <p>
+                                    Singer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Singer.Singer_name <br />
+                                    Composer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Composer.Composer_name <br />
+                                    Album:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Album.Album_name <br />
+                                    Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Genre.Genre_name <br />
+                                    Supplier:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.Supplier.Supplier_name <br />
+                                </p>
+                            </div>
+                            <div class="imagesize" style="text-align:center">
+                                <img style="height: 40% !important; width:auto !important" src="@Model.Image" />
+                            </div>
+                            <div class="content_raw" style="text-align:center">
+                                <audio controls="controls" autoplay style="color:black">
+                                    <source src="@Model.Music_File_Upload" type="audio/mpeg" />
+                                </audio>
+                            </div>
+                            <!--Start song lyric-->
+                            <div>
+                                <div class="title_sidebar">
+                                    <span class="title_sidebar_content">Song Lyric</span>
+                                </div>
+                                <div class="mt-1 mb-1 content_com">
+                                    <p>
+                                        @Html.Raw(Model.Lyric)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::song information-->
+                        <div class="comment_section">
+                        </div>
+                        <div class="view_commant">
+                            <div class="post_commt_form mb-4">
+                                <div class="font_roboto_medium fs-18px">@(ViewBag.countcomment) Comment </div>
+                                <h1 style="text-align: center; color: red">Please login to see comments</h1>
+                            </div>
+                        </div>
+                        <!--begin::related post-->
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Relate Song</span>
+                            </h4>
+                            <div class="row">
+                                @foreach (var item in relatedsong)
+                                {
+                                    <div class="col-lg-4 col-6 mb-3">
+                                        <div class="margin_related_post"><a href="#" class="me-2 category_sidebar_url">@item.Singer.Singer_name</a><a href="@Url.Action("SongDetail", "GuestSong", new {id = item.Song_id})"><img class="img_related_post" src="@item.Image" alt="@item.Song_id"></a></div>
+                                        <a href="@Url.Action("SongDetail", "GuestSong", new {id = item.Song_id})" class="post-url-side-bar">
+                                            @item.Song_name
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="related_post">
+                            <h4 class="title_sidebar">
+                                <span class="title_sidebar_content">Relate Genre</span>
+                            </h4>
+                            <div class="row">
+                                @foreach (var item in relatesonggenre)
+                                {
+                                    <div class="col-lg-4 col-6 mb-3">
+                                        <div class="margin_related_post"><a href="#" class="me-2 category_sidebar_url">@item.Singer.Singer_name</a><a href="@Url.Action("SongDetail", "GuestSong", new {id = item.Song_id})"><img class="img_related_post" src="@item.Image" alt="@item.Song_id"></a></div>
+                                        <a href="@Url.Action("SongDetail", "GuestSong", new {id = item.Song_id})" class="post-url-side-bar">
+                                            @item.Song_name
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <!--end::related post-->
+                    </div>
+                </div>
+            </div>
+            <!--end blog-->
+            <div class="col-xl-4">
+                <!--begin::post recent pc-->
+                <div class="side_bar_blog boder_sidebar recent_post_pc" data-sticky data-sticky-wrap data-margin-top="2" data-margin-bottom="20">
+                    <h4 class="title_sidebar">
+                        <span class="title_sidebar_content">New Songs Release</span>
+                    </h4>
+                    <div class="recent_post">
+                        <ul>
+                            @foreach (var item in newsongrelease)
+                            {
+                                <li>
+                                    <div class="post_head">
+                                        <a href="@Url.Action("SongDetail", "GuestSong", new {id = item.Song_id})"><img src="@item.Image" alt="@item.Song_id"></a>
+                                        <a href="@Url.Action("SongDetail", "GuestSong", new {id = item.Song_id})">@item.Song_name</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="post_date">
+                                            <a href="#" class="me-2 category_sidebar_url">@item.Singer.Singer_name</a><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
+                                            @item.Release_date
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <!--end::post recent pc-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

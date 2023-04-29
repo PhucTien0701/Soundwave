@@ -1,0 +1,41 @@
+﻿@using Soundwave_Music.Common.Helper
+@model Soundwave_Music.Models.Video
+@{
+    ViewBag.Title = "TOP LOVED VIDEO";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var tophotvietnamvideo = (List<Soundwave_Music.Models.Video>)ViewBag.VnHotVideo;
+}
+<div class="mt-20px margin_mobile_fixed">
+    <div class="container">
+        <div class="row boderproductdetail news_list_section" style="text-align:center">
+            <div class="container">
+                <h1 style="margin-top: 30px; font-size: 50px; color:#0026ff"><b>TOP 5 VIETNAM HOT VIDEO</b></h1>
+                <br />
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="font-size: 40px; color:#b200ff">
+                            <th><i>Image</i></th>
+                            <th><i>Song Name</i></th>
+                            <th><i>Singer</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in tophotvietnamvideo)
+                        {
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("VideoDetail", "GuestVideo", new {id = item.Video_id})"><img src="@item.Image" alt="@item.Video_id" style="height: 10% !important; width: auto !important" class="rounded-circle"></a>
+                                </td>
+                                <td style="font-size: 35px; color:#ff0000">
+                                    <a href="@Url.Action("VideoDetail", "GuestVideo", new {id = item.Video_id})">@item.Video_name</a>
+                                </td>
+                                <td style="font-size: 35px; color:#00ff21"><a href="#">@item.Singer.Singer_name</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end content Video -->

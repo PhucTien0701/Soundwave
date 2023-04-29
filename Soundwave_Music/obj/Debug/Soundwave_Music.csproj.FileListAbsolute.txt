@@ -1,0 +1,576 @@
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Soundwave_Music.dll.config
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Soundwave_Music.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Soundwave_Music.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\csc.exe
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\csc.exe.config
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\csc.rsp
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\csi.exe
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\csi.exe.config
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\csi.rsp
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.AppContext.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Console.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.IO.Compression.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Net.Http.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Net.Sockets.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.ValueTuple.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Xml.XPath.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\vbc.exe
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\vbc.exe.config
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\vbc.rsp
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Antlr3.Runtime.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Autofac.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\AutoMapper.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\BouncyCastle.Crypto.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\CKFinder.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\CKSource.FileSystem.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\EntityFramework.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\ImageProcessor.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\log4net.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Security.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Owin.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\PagedList.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\PagedList.Mvc.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\SlugGenerator.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Syncfusion.Compression.Base.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Syncfusion.Licensing.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Syncfusion.XlsIO.Base.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.ValueTuple.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Helpers.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Mvc.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Optimization.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Razor.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.WebPages.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\WebGrease.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Autofac.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Autofac.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\AutoMapper.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\BouncyCastle.Crypto.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\CKFinder.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\CKSource.FileSystem.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\ImageProcessor.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\log4net.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\PagedList.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\PagedList.Mvc.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Syncfusion.Compression.Base.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Syncfusion.Licensing.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Syncfusion.XlsIO.Base.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.ValueTuple.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Helpers.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Mvc.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Optimization.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.Razor.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.WebPages.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CopyComplete
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\obj\Debug\Soundwave_Music.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\obj\Debug\Soundwave_Music.pdb
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\PayPal.dll
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\bin\PayPal.xml
+C:\Users\DELL\Desktop\Soundwave_Music\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Soundwave_Music.dll.config
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Soundwave_Music.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Soundwave_Music.pdb
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csc.exe
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csc.exe.config
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csc.rsp
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csi.exe
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csi.exe.config
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csi.rsp
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Console.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\vbc.exe
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\vbc.rsp
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Autofac.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\AutoMapper.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\BouncyCastle.Crypto.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\CKFinder.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\CKSource.FileSystem.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\ImageProcessor.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\log4net.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Owin.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.Mvc.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\PayPal.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\SlugGenerator.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Compression.Base.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Licensing.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.XlsIO.Base.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.ValueTuple.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Helpers.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Mvc.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Optimization.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Razor.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\WebGrease.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Autofac.pdb
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Autofac.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\AutoMapper.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\BouncyCastle.Crypto.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\CKFinder.pdb
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\CKSource.FileSystem.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\ImageProcessor.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\log4net.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.Mvc.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\PayPal.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Compression.Base.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Licensing.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.XlsIO.Base.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.ValueTuple.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Helpers.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Mvc.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Optimization.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Razor.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CopyComplete
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.dll
+C:\Users\Admin\Downloads\Telegram Desktop\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Soundwave_Music.dll.config
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Soundwave_Music.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Soundwave_Music.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\csc.exe
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\csc.exe.config
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\csc.rsp
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\csi.exe
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\csi.exe.config
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\csi.rsp
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.AppContext.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Console.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.IO.Compression.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Net.Http.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.ValueTuple.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\vbc.exe
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\vbc.exe.config
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\vbc.rsp
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\VBCSCompiler.exe
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Antlr3.Runtime.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Autofac.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\AutoMapper.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\BouncyCastle.Crypto.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\CKFinder.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\CKSource.FileSystem.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\EntityFramework.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\ImageProcessor.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\log4net.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Newtonsoft.Json.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Owin.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\PagedList.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\PagedList.Mvc.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\PayPal.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\SlugGenerator.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Syncfusion.Compression.Base.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Syncfusion.Licensing.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Syncfusion.XlsIO.Base.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.ValueTuple.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Helpers.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Mvc.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Optimization.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Razor.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.WebPages.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Razor.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\WebGrease.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Autofac.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Autofac.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\AutoMapper.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\BouncyCastle.Crypto.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\CKFinder.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\CKSource.FileSystem.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\EntityFramework.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\ImageProcessor.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\log4net.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\PagedList.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\PagedList.Mvc.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\PayPal.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Syncfusion.Compression.Base.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Syncfusion.Licensing.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Syncfusion.XlsIO.Base.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.ValueTuple.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Helpers.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Mvc.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Optimization.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.Razor.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.WebPages.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Razor.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Newtonsoft.Json.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Antlr3.Runtime.pdb
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.dll
+C:\Users\ADMIN\Desktop\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Soundwave_Music.dll.config
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Soundwave_Music.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Soundwave_Music.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csc.exe
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csc.exe.config
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csc.rsp
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csi.exe
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csi.exe.config
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\csi.rsp
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.AppContext.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Console.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Globalization.Calendars.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.Compression.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.FileSystem.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Net.Http.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Net.Sockets.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.ValueTuple.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XPath.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\vbc.exe
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\vbc.exe.config
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\vbc.rsp
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\VBCSCompiler.exe
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Antlr3.Runtime.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Autofac.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\AutoMapper.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\BouncyCastle.Crypto.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\CKFinder.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\CKSource.FileSystem.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.SqlServer.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\ImageProcessor.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\log4net.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Newtonsoft.Json.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Owin.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.Mvc.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\PayPal.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\SlugGenerator.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Compression.Base.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Licensing.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.XlsIO.Base.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Threading.Tasks.Extensions.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.ValueTuple.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Helpers.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Mvc.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Optimization.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Razor.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Razor.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\WebGrease.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Autofac.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Autofac.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\AutoMapper.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\BouncyCastle.Crypto.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\CKFinder.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\CKSource.FileSystem.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\EntityFramework.SqlServer.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\ImageProcessor.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\log4net.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.Owin.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\PagedList.Mvc.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\PayPal.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Compression.Base.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.Licensing.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Syncfusion.XlsIO.Base.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Threading.Tasks.Extensions.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.ValueTuple.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Helpers.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Mvc.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Optimization.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.Razor.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\System.Web.WebPages.Razor.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Newtonsoft.Json.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Antlr3.Runtime.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CoreCompileInputs.cache
+D:\Project\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.CopyComplete
+D:\Project\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.dll
+D:\Project\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.pdb
+D:\Project\Soundwave\Soundwave\Soundwave_Music\obj\Debug\Soundwave_Music.csproj.AssemblyReference.cache

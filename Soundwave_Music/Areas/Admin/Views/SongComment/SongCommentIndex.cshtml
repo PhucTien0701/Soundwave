@@ -1,0 +1,137 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<Soundwave_Music.Models.Song_Comment>
+@{
+    ViewBag.Title = "Song Comment Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<!--css paging-->
+<link href="~/Content/admin_css/PagedList.css" rel="stylesheet" />
+<!--css paging-->
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+            <div data-kt-place="true" data-kt-place-mode="prepend" data-kt-place-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center me-3 flex-wrap mb-5 mb-lg-0 lh-1">
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder my-1 fs-3">Song Comment Lists</h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+            </div>
+            <!--end::Page title-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container">
+            <!--begin::Card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body py-3">
+                    <!--begin::Table container-->
+                    <!--begin::Table-->
+                    <table class="table table-row-dashed table-row-gray-300 gy-7 center_th_table">
+                        <!--begin::Table head-->
+                        <thead>
+                            <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                                <th class="center_th_table">
+                                    <div class="form-check form-check-sm form-check-custom form-check-solid ">
+                                        <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
+                                    </div>
+                                </th>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">Content</th>
+                                <th class="text-center">Create Date</th>
+                                <th class="text-center">Song</th>
+                                <th class="text-center">User</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <!--end::Table head-->
+                        <!--begin::Table body-->
+                        <tbody class="fw-normal text-gray-600">
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                            <input class="form-check-input" type="checkbox" value="1" />
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="text-gray-700 fw-bold">@item.Song_comment_id</span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex ">
+                                            <div class="d-flex justify-content-start flex-column ">
+                                                <span class="limit_lenght_newstitle text-gray-700 fw-bold" data-bs-toggle="tooltip" data-bs-placement="top" title="@item.Content">@item.Content</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <span>@item.Create_date</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span>@item.Song.Song_name</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span>@item.User.Full_name</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="@Url.Action("SongCommentDelete", "SongComment", new {id = item.Song_comment_id})" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm">
+                                            <!--begin::Svg Icon | path: fonts/duotone/General/Trash.svg-->
+                                            <span class="svg-icon svg-icon-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Permanently">
+                                                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g id="Stockholm-icons-/-Files-/-Deleted-file" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                                                        <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                                        <path d="M10.5857864,13 L9.17157288,11.5857864 C8.78104858,11.1952621 8.78104858,10.5620972 9.17157288,10.1715729 C9.56209717,9.78104858 10.1952621,9.78104858 10.5857864,10.1715729 L12,11.5857864 L13.4142136,10.1715729 C13.8047379,9.78104858 14.4379028,9.78104858 14.8284271,10.1715729 C15.2189514,10.5620972 15.2189514,11.1952621 14.8284271,11.5857864 L13.4142136,13 L14.8284271,14.4142136 C15.2189514,14.8047379 15.2189514,15.4379028 14.8284271,15.8284271 C14.4379028,16.2189514 13.8047379,16.2189514 13.4142136,15.8284271 L12,14.4142136 L10.5857864,15.8284271 C10.1952621,16.2189514 9.56209717,16.2189514 9.17157288,15.8284271 C8.78104858,15.4379028 8.78104858,14.8047379 9.17157288,14.4142136 L10.5857864,13 Z" id="Combined-Shape" fill="#000000"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <!--end::Table body-->
+                    </table>
+                    <!--end::Table-->
+                    <!--end::Table container-->
+                    <!--begin::Pagination-->
+                    <div class="paging_custom row">
+                        <div class="col-lg-5">
+                            <span> Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</span>
+                        </div>
+                        <div class="col-lg-7 d-flex  flex-row-reverse">
+                            @Html.PagedListPager(Model, _pagenumber => Url.Action("SongCommentIndex", new { _pagenumber }), new PagedListRenderOptions
+                            {
+                                LinkToPreviousPageFormat = "‹",
+                                LinkToNextPageFormat = "›",
+                                DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+                                DisplayLinkToLastPage = PagedListDisplayMode.Never,
+                                DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                                DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                                MaximumPageNumbersToDisplay = 10
+                            })
+                        </div>
+                    </div>
+                    <!--begin::Pagination-->
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::Content-->

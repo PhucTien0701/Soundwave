@@ -1,0 +1,968 @@
+﻿@using Soundwave_Music.Common.Helper
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charshet="utf-8" />
+    <title>QTHT: @ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/admin_css/css-loader.css" rel="stylesheet" />
+    <!----->
+    <link rel="icon" href="/Images/ImagesCollection/favicon.png" type="image/png" />
+    <!---->
+    <link href="~/Content/admin_css/datatables.bundle.css" rel="stylesheet" />
+    <!--custom ngày tháng-->
+    <link href="~/Content/admin_css/flatpickr.min.css" rel="stylesheet" />
+    <!---->
+    <link href="~/Content/admin_css/style.bundle.css" rel="stylesheet" />
+    <!---->
+    <link href="~/Content/admin_css/plugins.bundle.css" rel="stylesheet" />
+    <!---->
+    <link href="~/Content/admin_css/jquery-ui.css" rel="stylesheet" />
+    <!--tạo animation khi load page-->
+    <link href="~/Content/admin_css/animate.css" rel="stylesheet" />
+    <!---->
+    <link href="~/Content/admin_css/morris.css" rel="stylesheet" />
+</head>
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px" @*class="loading"*@>
+    @*<div class="dots-loader"></div>*@
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            <!--begin::Aside-->
+            <div id="kt_aside" class="aside aside-dark aside-hoverable no-print" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+                <!--begin::Brand-->
+                <div class="aside-logo flex-column-auto" id="kt_aside_logo">
+                    <!--begin::Logo-->
+                    <a href="@Url.Action("Index","Dashboard")">
+                        <img alt="Logo" src="~/Images/fevicon/Dark logo.png" class="h-40px logo" />
+                    </a>
+                    <!--end::Logo-->
+                    <!--begin::Aside toggler-->
+                    <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+                        <!--begin::Svg Icon | path: icons/duotone/Navigation/Angle-double-left.svg-->
+                        <span class="svg-icon svg-icon-1 rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <polygon points="0 0 24 0 24 24 0 24" />
+                                    <path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999)" />
+                                    <path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.5" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999)" />
+                                </g>
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::Aside toggler-->
+                </div>
+                <!--end::Brand-->
+                <!--begin::Aside menu-->
+                <div class="aside-menu flex-column-fluid">
+                    <!--begin::Aside Menu-->
+                    <div class="hover-scroll-overlay-y my-2 py-5 py-lg-8" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+                        <!--begin::Menu-->
+                        <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
+                            @if (User.Identity.GetRole() == 3)
+                            {
+                                <!--begin::playlist general manager-->
+                                <div class="menu-item">
+                                    <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistDelete" ? "active" : "")
+                                   " href="@Url.Action("PlaylistIndex", "Playlists")">
+                                        <span class="menu-icon">
+                                            <i class="bi bi-people-fill fs-2"></i>
+                                        </span>
+                                        <span class="menu-title">Playlist</span>
+                                    </a>
+                                </div>
+                                <!--end::playlist-->
+                            }
+                            <!--begin::dashboard-->
+                            //Admin
+                            @if (User.Identity.GetRole() == 1)
+                            {
+                                if (User.Identity.Permiss_Access() == true || User.Identity.Permiss_Create() == true || User.Identity.Permiss_Update() == true || User.Identity.Permiss_Edit() == true || User.Identity.Permiss_Delete() == true)
+                                {
+                                    <!--begin: Dashboard-->
+                                    <div class="menu-item">
+                                        <a class="menu-link @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")" href="@Url.Action("Index", "Dashboard")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-house fs-3"></i>
+                                            </span>
+                                            <span class="menu-title">Dashboard</span>
+                                        </a>
+                                    </div>
+                                    <!--end::dashboard-->
+                                    <!--begin::tags-->
+                                    <div class="menu-item">
+                                        <div class="menu-content pt-8 pb-2">
+                                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">User Management</span>
+                                        </div>
+                                    </div>
+                                    <!--end::tags-->
+                                    <!--begin::user manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AdminUserIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "UserTrash" ? "active" : "")
+                                   " href="@Url.Action("AdminUserIndex", "UserManagementAdmin")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-people-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">User List</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ListUserRole" ? "active" : "")" href="@Url.Action("ListUserRole", "UserManagementAdmin")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-shield-lock fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Roles Management</span>
+                                        </a>
+                                    </div>
+                                    <!--end::user manager-->
+                                    <!--begin::tags-->
+                                    <div class="menu-item">
+                                        <div class="menu-content pt-8 pb-2">
+                                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">Music General Management</span>
+                                        </div>
+                                    </div>
+                                    <!--end::tags-->
+                                    <!--begin::song general manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "MusicAreasIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "MusicAreasCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "MusicAreasEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "MusicAreasDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "MusicAreasTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "MusicAreasDelete" ? "active" : "")
+                                   " href="@Url.Action("MusicAreasIndex", "MusicAreas")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-globe fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Music Area</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SupplierIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SupplierCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SupplierEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SupplierDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SupplierTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SupplierDelete" ? "active" : "")
+                                   " href="@Url.Action("SupplierIndex", "Supplier")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-building fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Supplier</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "GenreIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "GenreCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "GenreEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "GenreDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "GenreTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "GenreDelete" ? "active" : "")
+                                   " href="@Url.Action("GenreIndex", "Genre")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-grid-3x3-gap fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Genre</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SingerIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SingerCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SingerEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SingerDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SingerTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SingerDelete" ? "active" : "")
+                                   " href="@Url.Action("SingerIndex", "Singer")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-mic-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Singer</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ComposerIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ComposerCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ComposerEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ComposerDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ComposerTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "ComposerDelete" ? "active" : "")
+                                   " href="@Url.Action("ComposerIndex", "Composer")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-file-text fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Composer</span>
+                                        </a>
+                                    </div>
+
+                                    <!--end::music general manager-->
+                                    <!--begin::tags-->
+                                    <div class="menu-item">
+                                        <div class="menu-content pt-8 pb-2">
+                                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">Music Items</span>
+                                        </div>
+                                    </div>
+                                    <!--end::tags-->
+                                    <!--begin song album-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "AlbumDelete" ? "active" : "")
+                                   " href="@Url.Action("AlbumIndex", "Album")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-play-circle-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Album</span>
+                                        </a>
+                                    </div>
+                                    <!--end song album-->
+                                    <!--begin::song manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongDelete" ? "active" : "")
+                                   " href="@Url.Action("SongIndex", "Song")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-music-note-beamed fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Song</span>
+                                        </a>
+                                    </div>
+                                    <!--end::song manager-->
+                                    <!--begin::Video manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VideoDelete" ? "active" : "")
+                                   " href="@Url.Action("VideoIndex", "MusicVideo")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-film fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Video</span>
+                                        </a>
+                                    </div>
+                                    <!--end::Video manager-->
+                                    <!--begin::playlist general manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PlaylistDelete" ? "active" : "")
+                                   " href="@Url.Action("PlaylistIndex", "Playlists")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-music-note-list fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Playlist</span>
+                                        </a>
+                                    </div>
+                                    <!--end::playlist-->
+                                    <!--begin::tags-->
+                                    <div class="menu-item">
+                                        <div class="menu-content pt-8 pb-2">
+                                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">Comment Management</span>
+                                        </div>
+                                    </div>
+                                    <!--end::tags-->
+                                    <!--begin::comment manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongCommentIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "SongCommentDelete" ? "active" : "")
+                                   " href="@Url.Action("SongCommentIndex", "SongComment")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-chat-dots-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Song Comment</span>
+                                        </a>
+                                    </div>
+                                    <!--end::comment manager-->
+                                    <!--begin::tags-->
+                                    <div class="menu-item">
+                                        <div class="menu-content pt-8 pb-2">
+                                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">News Management</span>
+                                        </div>
+                                    </div>
+                                    <!--end::tags-->
+                                    <!--begin::news manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsDelete" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "NewsCreate" ? "active" : "")
+                                   " href="@Url.Action("NewsIndex", "News")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-newspaper fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">News</span>
+                                        </a>
+                                    </div>
+                                    <!--end::news manager-->
+                                    <!--begin::tags-->
+                                    <div class="menu-item">
+                                        <div class="menu-content pt-8 pb-2">
+                                            <span class="menu-section text-muted text-uppercase fs-8 ls-1">Order Management</span>
+                                        </div>
+                                    </div>
+                                    <!--end::tags-->
+                                    <!--begin:: manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VIPIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VIPCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VIPEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VIPDetails" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VIPTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "VIPDelete" ? "active" : "")
+                                   " href="@Url.Action("VIPIndex", "VIPPack")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-gem fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">VIP Package</span>
+                                        </a>
+                                    </div>
+                                    <!--end::vip manager-->
+                                    <!--begin::order manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderDetails" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "OrderDelete" ? "active" : "")
+                                   " href="@Url.Action("OrderIndex", "Orders")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-box-seam fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Order List</span>
+                                        </a>
+                                    </div>
+                                    <!--end::API manager-->
+                                    <!--begin:: manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "APIIndex" ? "active" : "")
+                                   " href="@Url.Action("APIIndex", "API")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-key fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">API Management</span>
+                                        </a>
+                                    </div>
+                                    <!--end::API manager-->
+                                    <!--begin:: manager-->
+                                    <div class="menu-item">
+                                        <a class="menu-link
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PaymentIndex" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PaymentCreate" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PaymentEdit" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PaymentDetail" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PaymentTrash" ? "active" : "")
+                                   @(ViewContext.RouteData.Values["Action"].ToString() == "PaymentDelete" ? "active" : "")
+                                   " href="@Url.Action("PaymentIndex", "Payment")">
+                                            <span class="menu-icon">
+                                                <i class="bi bi-wallet-fill fs-2"></i>
+                                            </span>
+                                            <span class="menu-title">Payment Management</span>
+                                        </a>
+                                    </div>
+                                    <!--end::API manager-->
+                                }
+                            }
+                        </div>
+                        <!--end::Menu-->
+                    </div>
+                </div>
+                <!--end: Aside menu-->
+            </div>
+            <!--end::Aside-->
+            <!--begin::Wrapper-->
+            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" class="header no-print align-items-stretch">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between ">
+                        <!--begin::Aside mobile toggle-->
+                        <div class="d-flex align-items-center d-lg-none ms-n3 me-1" title="Show aside menu">
+                            <div class="btn btn-icon btn-active-color-white" id="kt_aside_mobile_toggle">
+                                <i class="bi bi-list fs-1"></i>
+                            </div>
+                        </div>
+                        <!--end::Aside mobile toggle-->
+                        <!--begin::Mobile logo-->
+                        <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+                            <a href="@Url.Action("Index","Dashboard")" class="d-lg-none">
+                                <img alt="Logo" src="~/Images/fevicon/Logo.png" class="h-15px" />
+                            </a>
+                        </div>
+                        <!--end::Mobile logo-->
+                        <!--begin::Wrapper-->
+                        <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1 ">
+                            <!--begin::Navbar-->
+                            <div class="d-flex align-items-stretch" id="kt_header_nav">
+                                <!--begin::Menu wrapper-->
+                                <div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-place="true" data-kt-place-mode="prepend" data-kt-place-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+                                    <!--begin::Menu-->
+                                    <div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+                                        <div class="menu-item me-lg-1">
+                                            <a class="menu-link active py-3" href="#">
+                                                <span class="menu-title">Dashboard</span>
+                                            </a>
+                                        </div>
+                                        <!--begin::Menu top-->
+                                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                                            <!--begin::Menu top Menu-->
+                                            <span class="menu-link py-3">
+                                                <span class="menu-title">Menu</span>
+                                                <span class="menu-arrow d-lg-none"></span>
+                                            </span>
+                                            <!--end::Menu top Menu-->
+                                            <!--begin::Menu top sub Menu-->
+                                            <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+                                                <!--begin::account manager-->
+                                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+                                                    <span class="menu-link py-3">
+                                                        <span class="menu-icon">
+                                                            <i class="bi bi-person fs-2"></i>
+                                                        </span>
+                                                        <span class="menu-title">User Management</span>
+                                                        <span class="menu-arrow"></span>
+                                                    </span>
+                                                    <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
+                                                        <div class="menu-item">
+                                                            <a class="menu-link py-3" href="@Url.Action("ListUserRole", "UserManagementAdmin")">
+                                                                <span class="menu-bullet">
+                                                                    <span class="bullet bullet-dot"></span>
+                                                                </span>
+                                                                <span class="menu-title">List Role</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::account manager-->
+                                            </div>
+                                            <!--begin::Menu top sub Menu-->
+                                        </div>
+                                        <!--end::menu top-->
+                                    </div>
+                                    <!--end::Menu-->
+                                </div>
+                                <!--end::Menu wrapper-->
+                            </div>
+                            <!--end::Navbar-->
+                            <!--begin::Topbar-->
+                            <div class="d-flex align-items-stretch flex-shrink-0">
+                                <!--begin::Toolbar wrapper-->
+                                <div class="topbar d-flex align-items-stretch flex-shrink-0">
+                                    <!--begin::Search-->
+                                    <div class="d-flex align-items-stretch" id="kt_header_user_menu_toggle">
+                                        <!--begin::Menu wrapper-->
+                                        <div class="topbar-item cursor-pointer symbol px-3 px-lg-5 me-n3 me-lg-n5 symbol-30px symbol-md-35px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
+                                            <img src="@User.Identity.GetAvartar()" alt="avatar" />
+                                        </div>
+                                        <!--begin::Menu-->
+                                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3">
+                                                <div class="menu-content d-flex align-items-center px-3">
+                                                    <!--begin::Avatar-->
+                                                    <div class="symbol symbol-50px me-5">
+                                                        <img alt="Logo" src="@User.Identity.GetAvartar()" />
+                                                    </div>
+                                                    <!--end::Avatar-->
+                                                    <!--begin::Username-->
+                                                    <div class="d-flex flex-column">
+                                                        <div class="fw-bolder d-flex align-items-center fs-5 limit_email_name" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@User.Identity.GetEmail()">
+                                                            @User.Identity.GetEmail()
+                                                        </div>
+                                                        <a class="fw-bold text-muted text-hover-primary fs-7">@User.Identity.GetRoleName()</a>
+                                                    </div>
+                                                    <!--end::Username-->
+                                                </div>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu separator-->
+                                            <div class="separator my-2"></div>
+                                            <!--end::Menu separator-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-5">
+                                                <a href="@Url.Action("ReturnProfile","Base")" class="menu-link px-5">Back to profile</a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-5">
+                                                <a href="@Url.Action("ReturnHome","Base")" class="menu-link px-5">Back to home page</a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu separator-->
+                                            <div class="separator my-2"></div>
+                                            <!--end::Menu separator-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-5">
+                                                <a href="@Url.Action("Logout","Base")" class="menu-link px-5">Log Out</a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                        </div>
+                                        <!--end::Menu-->
+                                        <!--end::Menu wrapper-->
+                                    </div>
+                                    <!--end::User -->
+                                    <!--begin::Heaeder menu toggle-->
+                                    <div class="d-flex align-items-stretch d-lg-none px-3 me-n3" title="Show header menu">
+                                        <div class="topbar-item" id="kt_header_menu_mobile_toggle">
+                                            <i class="bi bi-text-left fs-1"></i>
+                                        </div>
+                                    </div>
+                                    <!--end::Heaeder menu toggle-->
+                                </div>
+                                <!--end::Toolbar wrapper-->
+                            </div>
+                            <!--end::Topbar-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Header-->
+                @RenderBody()
+                <!--show toast khi xử lý một xử kiện, xem ở từng action của controller-->
+                @Html.Partial("_MessageAlert")
+                <!--begin::Footer-->
+                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted fw-bold me-1">2022©</span>
+                            <a href="#" target="_blank" class="text-gray-800 text-hover-primary">Soundwave Music</a>
+                        </div>
+                        <!--end::Copyright-->
+                        <!--begin::Menu-->
+                        <ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+                            <li class="menu-item">
+                                <a href="#" target="_blank" class="menu-link px-2">About</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" target="_blank" class="menu-link px-2">Support</a>
+                            </li>
+                        </ul>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Footer-->
+                <!--begin::Chat drawer-->
+                <div id="kt_drawer_chat" class="bg-white" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+                    <!--begin::Messenger-->
+                    <div class="card w-100" id="kt_drawer_chat_messenger">
+                        <!--begin::Card header-->
+                        <div class="card-header pe-5" id="kt_drawer_chat_messenger_header">
+                            <!--begin::Title-->
+                            <div class="card-title">
+                                <!--begin::User-->
+                                <div class="d-flex justify-content-center flex-column me-3">
+                                    <a href="#" class="fs-4 fw-bolder text-gray-900 text-hover-primary me-1 mb-2 lh-1">Brian Cox</a>
+                                    <!--begin::Info-->
+                                    <div class="mb-0 lh-1">
+                                        <span class="badge badge-success badge-circle w-10px h-10px me-1"></span>
+                                        <span class="fs-7 fw-bold text-gray-400">Active</span>
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                                <!--end::User-->
+                            </div>
+                            <!--end::Title-->
+                            <!--begin::Card toolbar-->
+                            <div class="card-toolbar">
+                                <!--begin::Menu-->
+                                <div class="me-2">
+                                    <button class="btn btn-sm btn-icon btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+                                        <i class="bi bi-three-dots fs-3"></i>
+                                    </button>
+                                    <!--begin::Menu 3-->
+                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
+                                        <!--begin::Heading-->
+                                        <div class="menu-item px-3">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Contacts</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_users_search">Add Contact</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="#" class="menu-link flex-stack px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">
+                                                Invite Contacts
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a contact email to send an invitation"></i>
+                                            </a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start" data-kt-menu-flip="left, center, top">
+                                            <a href="#" class="menu-link px-3">
+                                                <span class="menu-title">Groups</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <!--begin::Menu sub-->
+                                            <div class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                <!--begin::Menu item-->
+                                                <div class="menu-item px-3">
+                                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Create Group</a>
+                                                </div>
+                                                <!--end::Menu item-->
+                                                <!--begin::Menu item-->
+                                                <div class="menu-item px-3">
+                                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Invite Members</a>
+                                                </div>
+                                                <!--end::Menu item-->
+                                                <!--begin::Menu item-->
+                                                <div class="menu-item px-3">
+                                                    <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
+                                                </div>
+                                                <!--end::Menu item-->
+                                            </div>
+                                            <!--end::Menu sub-->
+                                        </div>
+                                        <!--end::Menu item-->
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3 my-1">
+                                            <a href="#" class="menu-link px-3" data-bs-toggle="tooltip" title="Coming soon">Settings</a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                    </div>
+                                    <!--end::Menu 3-->
+                                </div>
+                                <!--end::Menu-->
+                                <!--begin::Close-->
+                                <div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_chat_close">
+                                    <!--begin::Svg Icon | path: icons/duotone/Navigation/Close.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g transform="translate(12.000000, 12.000000) rotate(-45.000000) translate(-12.000000, -12.000000) translate(4.000000, 4.000000)" fill="#000000">
+                                                <rect fill="#000000" x="0" y="7" width="16" height="2" rx="1" />
+                                                <rect fill="#000000" opacity="0.5" transform="translate(8.000000, 8.000000) rotate(-270.000000) translate(-8.000000, -8.000000)" x="0" y="7" width="16" height="2" rx="1" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </div>
+                                <!--end::Close-->
+                            </div>
+                            <!--end::Card toolbar-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body" id="kt_drawer_chat_messenger_body">
+                            <!--begin::Messages-->
+                            <div class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
+                                <!--begin::Message(in)-->
+                                <div class="d-flex justify-content-start mb-10">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-start">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Details-->
+                                            <div class="ms-3">
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">Brian Cox</a>
+                                                <span class="text-muted fs-7 mb-1">2 mins</span>
+                                            </div>
+                                            <!--end::Details-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-info text-dark fw-bold mw-lg-400px text-start" data-kt-element="message-text">How likely are you to recommend our company to your friends and family ?</div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(in)-->
+                                <!--begin::Message(out)-->
+                                <div class="d-flex justify-content-end mb-10">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-end">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Details-->
+                                            <div class="me-3">
+                                                <span class="text-muted fs-7 mb-1">5 mins</span>
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary ms-1">You</a>
+                                            </div>
+                                            <!--end::Details-->
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-primary text-dark fw-bold mw-lg-400px text-end" data-kt-element="message-text">Hey there, we’re just writing to let you know that you’ve been subscribed to a repository on GitHub.</div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(out)-->
+                                <!--begin::Message(in)-->
+                                <div class="d-flex justify-content-start mb-10">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-start">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Details-->
+                                            <div class="ms-3">
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">Brian Cox</a>
+                                                <span class="text-muted fs-7 mb-1">1 Hour</span>
+                                            </div>
+                                            <!--end::Details-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-info text-dark fw-bold mw-lg-400px text-start" data-kt-element="message-text">Ok, Understood!</div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(in)-->
+                                <!--begin::Message(out)-->
+                                <div class="d-flex justify-content-end mb-10">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-end">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Details-->
+                                            <div class="me-3">
+                                                <span class="text-muted fs-7 mb-1">2 Hours</span>
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary ms-1">You</a>
+                                            </div>
+                                            <!--end::Details-->
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-primary text-dark fw-bold mw-lg-400px text-end" data-kt-element="message-text">You’ll receive notifications for all issues, pull requests!</div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(out)-->
+                                <!--begin::Message(in)-->
+                                <div class="d-flex justify-content-start mb-10">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-start">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Details-->
+                                            <div class="ms-3">
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">Brian Cox</a>
+                                                <span class="text-muted fs-7 mb-1">3 Hours</span>
+                                            </div>
+                                            <!--end::Details-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-info text-dark fw-bold mw-lg-400px text-start" data-kt-element="message-text">
+                                            You can unwatch this repository immediately by clicking here:
+                                            <a href="https://keenthemes.com">Keenthemes.com</a>
+                                        </div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(in)-->
+                                <!--begin::Message(template for out)-->
+                                <div class="d-flex justify-content-end mb-10 d-none" data-kt-element="template-out">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-end">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Details-->
+                                            <div class="me-3">
+                                                <span class="text-muted fs-7 mb-1">Just now</span>
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary ms-1">You</a>
+                                            </div>
+                                            <!--end::Details-->
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-primary text-dark fw-bold mw-lg-400px text-end" data-kt-element="message-text"></div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(template for out)-->
+                                <!--begin::Message(template for in)-->
+                                <div class="d-flex justify-content-start mb-10 d-none" data-kt-element="template-in">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column align-items-start">
+                                        <!--begin::User-->
+                                        <div class="d-flex align-items-center mb-2">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-35px symbol-circle">
+                                                <img alt="Pic" src="~/Images/fevicon/Full_Logo.png" />
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Details-->
+                                            <div class="ms-3">
+                                                <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">Brian Cox</a>
+                                                <span class="text-muted fs-7 mb-1">Just now</span>
+                                            </div>
+                                            <!--end::Details-->
+                                        </div>
+                                        <!--end::User-->
+                                        <!--begin::Text-->
+                                        <div class="p-5 rounded bg-light-info text-dark fw-bold mw-lg-400px text-start" data-kt-element="message-text">Right before vacation season we have the next Big Deal for you.</div>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Message(template for in)-->
+                            </div>
+                            <!--end::Messages-->
+                        </div>
+                        <!--end::Card body-->
+                        <!--begin::Card footer-->
+                        <div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
+                            <!--begin::Input-->
+                            <textarea class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
+                            <!--end::Input-->
+                            <!--begin:Toolbar-->
+                            <div class="d-flex flex-stack">
+                                <!--begin::Actions-->
+                                <div class="d-flex align-items-center me-2">
+                                    <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
+                                        <i class="bi bi-paperclip fs-3"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
+                                        <i class="bi bi-upload fs-3"></i>
+                                    </button>
+                                </div>
+                                <!--end::Actions-->
+                                <!--begin::Send-->
+                                <button class="btn btn-primary" type="button" data-kt-element="send">Send</button>
+                                <!--end::Send-->
+                            </div>
+                            <!--end::Toolbar-->
+                        </div>
+                        <!--end::Card footer-->
+                    </div>
+                    <!--end::Messenger-->
+                </div>
+                <!--end::Chat drawer-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Page-->
+    </div>
+    <!--end::Root-->
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <!--begin::Svg Icon | path: icons/duotone/Navigation/Up-2.svg-->
+        <span class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.5" x="11" y="10" width="2" height="10" rx="1" />
+                    <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+        </span>
+        <!--end::Svg Icon-->
+    </div>
+    <!--end::Scrolltop-->
+    <!--end::Main-->
+    <!--begin:: java script-->
+    <!--script upload ảnh và chỉnh sửa văn bản-->
+    <script src="~/Scripts/admin_js/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/admin_js/ckfinder/ckfinder.js"></script>
+    <!--sắp xếp bảng-->
+    <script src="~/Scripts/admin_js/sort_table.js"></script>
+    <!---->
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <!---->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!---->
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <!--check ràng buộc vd: mk,email,...-->
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <!---->
+    <script src="~/Scripts/my_js/jquery.inputmask.js"></script>
+    <!---->
+    <script src="~/Scripts/my_js/inputmask.js"></script>
+    <!--custom định dạng ngày tháng -->
+    <script src="~/Scripts/admin_js/flatpickr.min.js"></script>
+    <!--custom thông báo-->
+    <script src="~/Scripts/admin_js/custom_toastr.js"></script>
+    <!---->
+    <script src="~/Scripts/admin_js/fontawesome_all.js"></script>
+    <!---->
+    <script src="~/Scripts/admin_js/plugins.bundle.js"></script>
+    <script src="~/Scripts/admin_js/jquery-ui-1.12.1.min.js"></script>
+    <!---->
+    <script src="~/Scripts/admin_js/scripts.bundle.js"></script>
+    <!--click show popup button-->
+    <script src="~/Scripts/admin_js/popper.min.js"></script>
+    <!--custom datatables-->
+    <script src="~/Scripts/admin_js/custom_datatables.js"></script>
+    <!--xem ảnh full view-->
+    <script src="~/Scripts/fslightbox.js"></script>
+    <!--signalr-->
+    <script src="~/Scripts/jquery.signalR-2.4.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    @RenderSection("scripts", required: false)
+    <!--begin:: end script-->
+</body>
+</html>

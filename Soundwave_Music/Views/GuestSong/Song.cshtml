@@ -1,0 +1,42 @@
+﻿@using PagedList
+@model IPagedList<Soundwave_Music.Models.Song>
+@{
+    ViewBag.Title = "Genre - " + ViewBag.SongGenre;
+    ViewBag.Tag = "Song Genre";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="mt-20px margin_mobile_fixed">
+    <div class="container">
+        <div class="row boderproductdetail news_list_section">
+            <!--begin::item newscategory-->
+            <h4 style="color:red; text-align:center; font-size: 24px"><b>Songs</b></h4>
+            @if (Model.Count == 0)
+            {
+                <span class="h2 text-danger center mt-100px">There is no song</span>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-6 listnewscategory">
+                        <div class="blog_section">
+                            <a href="@Url.Action("SongDetail","GuestSong",new {id = item.Song_id})">
+                                <div class="blog_feature_img disable_scale_img"> <img class="img-responsive transition" src="@item.Image" alt="#"> </div>
+                                <div class="blog_feature_cantant">
+                                    <p class="blog_head d-flex justify-content-center">@item.Song_name</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+            <!--end::item newscategory-->
+            <!--begin::pagination-->
+            <div class="center mt-20px mb-20px">
+                @Html.Partial("_Paging", Model)
+            </div>
+            <!--begin::pagination-->
+        </div>
+    </div>
+</div>
+<!-- end content news -->
